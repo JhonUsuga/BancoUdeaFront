@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Banco UDEA</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco UDEA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="transferencia.html">Transferencia</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Listado de Clientes</h2>
+        <div class="filtros">
+            <input type="text" id="buscarCliente" placeholder="Buscar por nombre, apellido o cuenta...">
+            <button onclick="cargarClientes()">Buscar</button>
+        </div>
+        <table id="tablaClientes">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Número de Cuenta</th>
+                    <th>Saldo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los clientes se cargarán aquí -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2023 Banco UDEA - Todos los derechos reservados</p>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/clientes.js"></script>
+</body>
+</html>
