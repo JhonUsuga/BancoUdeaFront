@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const mensajeDiv = document.getElementById('mensajeTransferencia');
             mensajeDiv.textContent = 'Transferencia realizada con éxito';
             mensajeDiv.className = 'success';
-            // Ejemplo en transferencia.js
+            
             button.disabled = true;
             button.textContent = 'Procesando...';
             // Después de la respuesta
