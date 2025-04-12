@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Opcional: cargar algún historico por defecto al cargar la página
+    document.querySelector('button').addEventListener('click', cargarHistorico);
 });
 
 async function cargarHistorico() {

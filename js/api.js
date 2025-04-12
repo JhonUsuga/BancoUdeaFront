@@ -1,5 +1,5 @@
-import axios from "axios";
-const API_BASE_URL = "http://localhost:8080";
+ 
+const API_BASE_URL = "http://localhost:8080/api";
 
 
 
@@ -31,6 +31,7 @@ async function fetchClienteById(id) {
 
 async function realizarTransferencia(senderAccountNumber, receiverAccountNumber, amount) {
     try {
+        const timestamp = new Date().toISOString().slice(0, 19);
         const response = await fetch(`${API_BASE_URL}/transactions/transfer`, {
             method: 'POST',
             headers: {
@@ -50,8 +51,8 @@ async function realizarTransferencia(senderAccountNumber, receiverAccountNumber,
         
         return await response.json();
     } catch (error) {
-        console.error('Error:', error);
-        throw error;
+        console.error('Error en realizarTransferencia:', error);
+        throw new Error('No se pudo completar la transferencia. Verifica los datos e intenta nuevamente.');
     }
 }
 

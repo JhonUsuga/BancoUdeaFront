@@ -1,4 +1,4 @@
-import { fetchClientes } from "./api.js";
+
 
 document.addEventListener('DOMContentLoaded', () => {
     cargarClientes();
